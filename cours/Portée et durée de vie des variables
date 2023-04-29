@@ -1,0 +1,18 @@
+#include <stdio.h>
+int VarGlobale1 = 1;  /* Variable globale */
+void main(void)
+{
+    int VarLocaleMain = 2; /* Variable locale au main*/
+    if (VarLocaleMain >= 0) {
+    int VarLocalBlocIf = 321; /* Variable locale*/
+    /*visible dans le bloc if*/
+
+    }
+printf("%d, %d, %d\n", VarGlobale1, VarLocaleMain, Fonction(54321));
+}
+int VarGlobale2 = 123;  /* Variable globale invisible par le main*/
+int Fonction(int Val)
+{
+    int VarLocaleFonction = Val;  /* Variable locale à la fonction*/
+    return VarLocaleFonction * VarGlobale1 * VarGlobale2;
+}
